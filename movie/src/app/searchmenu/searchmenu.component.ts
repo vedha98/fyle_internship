@@ -7,7 +7,7 @@ import {Http, Headers} from '@angular/http';
   styleUrls: ['./searchmenu.component.css']
 })
 export class SearchmenuComponent implements OnInit {
-
+title : String;
   constructor(private searchservice:SearchserviceService,private http : Http ) { }
 
   ngOnInit(): void {
@@ -16,8 +16,8 @@ export class SearchmenuComponent implements OnInit {
 
     getcalled(){
     var details
-  this.searchservice.searchbyTitle().subscribe(data =>{
-  console.log(data)
+  this.searchservice.searchbyTitle(this.title).subscribe(data =>{
+  console.log(data.Title)
 
   })
 
