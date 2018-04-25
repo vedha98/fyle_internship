@@ -15,10 +15,11 @@
                    	    <img class="img-responsive" src={{details.Poster}} style="width:30%;">
 
 		    <div class=" clearfix">
-		        <h3>{{details.Title}} </h3>
-		        <h4>{{details.Genre}}</h4>
-                <h4>{{details.Type}}</h4>
-		       <hr>
+		        <h3><b>{{details.Title}} </b></h3>
+            <h4>{{details.Type}}</h4>
+		        <h5>{{details.Genre}}</h5>
+
+
 
 
 
@@ -27,6 +28,7 @@
 		            <div class="col-md-7">
 		                 <div class="profile-block">
                        <h4 style="padding-top=20px">Ratings</h4>
+                       <br><br>
                 <ul class="list-group" style="padding-top=20px">
     <li class="list-group-item" *ngFor='let value of details.Ratings'>{{value.Source}} <span class="badge">{{value.Value}}</span></li>
 
@@ -36,24 +38,81 @@
 	            </div>
           </div>
                 </div>
-                </div>
+              </div>
                 <div class="row">
                  <div class="panel">
                 <div class=" panel-body ">
                  <div class="col-md-12">
 
 		        <ul class="list-inline">
-		            <li><h5><strong>Interested in: <a href="#"><i class="fa fa-wrench"> Edit</i></a> </strong> </h5> </li>
-		            <li>Maruti, Suzuki, Nissan, Skoda, BMW, Mercedez, Skoda, Honda, Toyota, Hyundai</li>
+		            <li><h5><strong>Actors: </strong> </h5> </li>
+		            <li>{{details.Actors}}</li>
 		        </ul>
-		        <ul class="list-inline">
-		            <li><h5><strong>Preferred Buying Location: <a href="#"><i class="fa fa-wrench"> Edit</i></a></strong></h5></li>
-		            <li>New Delhi, Jaipur, Haryana, UP, Bihar</li>
+            <ul class="list-inline">
+		            <li><h5><strong>Awards: </strong> </h5> </li>
+		            <li>{{details.Awards}}</li>
 		        </ul>
-		        <ul class="list-inline">
-		            <li><h5><strong>My Bidding Limit:</strong></h5></li>
-		            <li> Rs. 2,00000/- </li>
+            <ul class="list-inline">
+		            <li><h5><strong>BoxOffice: </strong> </h5> </li>
+		            <li>{{details.BoxOffice}}</li>
 		        </ul>
+            <ul class="list-inline">
+		            <li><h5><strong>Country: </strong> </h5> </li>
+		            <li>{{details.Country}}</li>
+		        </ul>
+            <ul class="list-inline">
+		            <li><h5><strong>DVD: </strong> </h5> </li>
+		            <li>{{details.DVD}}</li>
+		        </ul>
+            <ul class="list-inline">
+		            <li><h5><strong>Director: </strong> </h5> </li>
+		            <li>{{details.Director}}</li>
+		        </ul>
+            <ul class="list-inline">
+		            <li><h5><strong>Language: </strong> </h5> </li>
+		            <li>{{details.Language}}</li>
+		        </ul>
+            <ul class="list-inline">
+		            <li><h5><strong>Metascore: </strong> </h5> </li>
+		            <li>{{details.Metascore}}</li>
+		        </ul>
+            <ul class="list-inline">
+		            <li><h5><strong>Plot: </strong> </h5> </li>
+		            <li>{{details.Plot}}</li>
+		        </ul>
+            <ul class="list-inline">
+                <li><h5><strong>Rated: </strong> </h5> </li>
+                <li>{{details.Rated}}</li>
+            </ul>
+            <ul class="list-inline">
+                <li><h5><strong>Released: </strong> </h5> </li>
+                <li>{{details.Released}}</li>
+            </ul>
+            <ul class="list-inline">
+                <li><h5><strong>Runtime: </strong> </h5> </li>
+                <li>{{details.Runtime}}</li>
+            </ul>
+            <ul class="list-inline">
+                <li><h5><strong>Website: </strong> </h5> </li>
+                <li>{{details.Website}}</li>
+            </ul>
+            <ul class="list-inline">
+                <li><h5><strong>Writer: </strong> </h5> </li>
+                <li>{{details.Writer}}</li>
+            </ul>
+            <ul class="list-inline">
+                <li><h5><strong>imdbID: </strong> </h5> </li>
+                <li>{{details.imdbID}}</li>
+            </ul>
+            <ul class="list-inline">
+                <li><h5><strong>imdbRating: </strong> </h5> </li>
+                <li>{{details.imdbRating}}</li>
+            </ul>
+            <ul class="list-inline">
+                <li><h5><strong>imdbVotes: </strong> </h5> </li>
+                <li>{{details.imdbVotes}}</li>
+            </ul>
+
 		        <hr >
 
 
