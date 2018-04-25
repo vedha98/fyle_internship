@@ -14,6 +14,10 @@ data : any
   return this.http.get('http://www.omdbapi.com/?t='+title+'&apikey=caaca514')
 .map(res => res.json());
 }
+searchbyTitled(title){
+return this.http.get('http://www.omdbapi.com/?t='+title+'&apikey=caaca514')
+.map(res => res.json());
+}
 getDetails(){
 
 }

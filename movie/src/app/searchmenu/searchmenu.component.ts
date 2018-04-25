@@ -19,7 +19,12 @@ title : String;
     var details
   this.searchservice.searchbyTitle(this.title).subscribe(data =>{
   console.log(data)
+  if(data.Response == "True"){
   this.route.navigate(['detailspage/'+data.Title])
+  }else{
+  alert(data.Error)
+  }
+
 
   })
 

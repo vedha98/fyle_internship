@@ -15,8 +15,9 @@ details: any;
   this.route.params.subscribe(params => {
       this.data = params['title'];
     });
-    this.searchservice.searchbyTitle(this.title).subscribe(data =>{
-    this.details = data;
+    this.searchservice.searchbyTitled(this.data).subscribe(data =>{
+    this.details = JSON.stringify(data);
+
   }
 
 }
