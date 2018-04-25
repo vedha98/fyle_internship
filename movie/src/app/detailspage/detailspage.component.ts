@@ -16,8 +16,8 @@ details: any;
       this.data = params['title'];
     });
     this.searchservice.searchbyTitled(this.data).subscribe(data =>{
-    this.details = JSON.stringify(data);
+    this.details = data;
 
-  }
-
+  });
+}
 }
