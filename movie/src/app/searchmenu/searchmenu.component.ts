@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchserviceService } from '../services/searchservice.service';
+import { Router } from '@angular/router';
 import {Http, Headers} from '@angular/http';
 @Component({
   selector: 'app-searchmenu',
@@ -8,7 +9,7 @@ import {Http, Headers} from '@angular/http';
 })
 export class SearchmenuComponent implements OnInit {
 title : String;
-  constructor(private searchservice:SearchserviceService,private http : Http ) { }
+  constructor(private searchservice:SearchserviceService,private http : Http, private route: Router ) { }
 
   ngOnInit(): void {
 
@@ -17,7 +18,8 @@ title : String;
     getcalled(){
     var details
   this.searchservice.searchbyTitle(this.title).subscribe(data =>{
-  console.log(data.Title)
+  console.log(data)
+  this.route.navigate(['detailspage/'+data.Title])
 
   })
 
