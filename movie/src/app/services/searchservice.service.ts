@@ -20,6 +20,8 @@ getDetails(){
 getRecents(){
 return JSON.parse(localStorage.getItem('recentsearches')).searches
 }
+
+
 setRecent(recent_title){
 var recentst = localStorage.getItem('recentsearches')
 
