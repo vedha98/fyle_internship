@@ -9,6 +9,8 @@ import {Http, Headers} from '@angular/http';
 })
 export class SearchmenuComponent implements OnInit {
 title : String;
+advanced: Boolean;
+imdbID:String;
   constructor(private searchservice:SearchserviceService,private http : Http, private route: Router ) { }
 
   ngOnInit(): void {
@@ -27,6 +29,20 @@ title : String;
 
 
   })
+
+}
+getcalledID(){
+var details
+this.searchservice.searchbyID(this.imdbID).subscribe(data =>{
+console.log(data)
+if(data.Response == "True"){
+this.route.navigate(['detailspage/'+data.Title])
+}else{
+alert(data.Error)
+}
+
+
+})
 
 }
 }

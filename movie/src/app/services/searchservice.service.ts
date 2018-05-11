@@ -14,6 +14,11 @@ data : any
   return this.http.get('http://www.omdbapi.com/?t='+title+'&apikey=caaca514')
 .map(res => res.json());
 }
+searchbyID(title){
+this.setRecent(title);
+return this.http.get('http://www.omdbapi.com/?i='+title+'&apikey=caaca514')
+.map(res => res.json());
+}
 searchbyTitled(title){
 return this.http.get('http://www.omdbapi.com/?t='+title+'&apikey=caaca514')
 .map(res => res.json());

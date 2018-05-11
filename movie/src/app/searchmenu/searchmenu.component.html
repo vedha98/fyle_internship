@@ -1,9 +1,21 @@
-<div class="wrap">
-   <div class="search">
-      <input type="text" class="searchTerm" placeholder="The title of the movie you looking for?" [(ngModel)]="title">
+<div class="wrap" *ngIf="!advanced">
+   <div class="search" >
+      <input type="text" class="searchTerm" placeholder="The Title of the movie you are looking for?" [(ngModel)]="title">
       <button  class="searchButton" (click)="getcalled()" >
         <i class="fa fa-search"></i>
      </button>
    </div>
-   <a href="/detailspage">Advanced Search?</a>
+   <hr>
+   <a (click)="advanced=true" href="#">Search Using imdbID?</a>
+</div>
+<div class="wrap" *ngIf="advanced">
+   <div class="search" >
+      <input type="text" class="searchTerm" placeholder="The imdb ID of the movie you are looking for?" [(ngModel)]="imdbID">
+      
+      <button  class="searchButton" (click)="getcalledID()" >
+        <i class="fa fa-search"></i>
+     </button>
+   </div>
+   <hr>
+   <a (click)="advanced=false" href="#">Search Using Title?</a>
 </div>

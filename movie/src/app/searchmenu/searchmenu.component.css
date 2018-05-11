@@ -13,7 +13,7 @@ div{
 .searchTerm {
   float: left;
   width: 100%;
-  border: 3px solid #00B4CC;
+  border: 3px solid grey;
   padding: 5px;
   height: 20px;
   border-radius: 5px;
@@ -22,7 +22,7 @@ div{
 }
 
 .searchTerm:focus{
-  color: #00B4CC;
+  color: grey;
 }
 
 .searchButton {
@@ -30,8 +30,8 @@ div{
   right: -50px;
   width: 40px;
   height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
+  border: 1px solid grey;
+  background: grey;
   text-align: center;
   color: #fff;
   border-radius: 5px;

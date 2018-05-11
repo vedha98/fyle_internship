@@ -1,4 +1,4 @@
-body {background:#f2f2f2;}
+
 i {font-size:12px; color:#dd0000;}
 
 .site-title {margin-top: 80px;margin-bottom: 20px; font-weight: 300;}
@@ -383,4 +383,7 @@ i {font-size:12px; color:#dd0000;}
     position: relative;
     text-decoration: none;
     width: 100%;
+}
+.main-content{
+  background-color: grey;
 }
